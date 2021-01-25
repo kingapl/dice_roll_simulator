@@ -10,7 +10,7 @@ class DiceRollSimulator(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
         self.master = master
-        master.geometry("600x400")
+        master.geometry("500x550")
         master.title("Dice Roll Simulator")
 
         self.pack()
