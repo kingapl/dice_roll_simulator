@@ -22,8 +22,10 @@ class DiceRollSimulator(tk.Frame):
                                 font="Arial 24 bold", pady=20, fg="#991006")
         self.text_label.pack(side="top")
 
-        self.roll_the_dice = tk.Button(self, text="Roll the dice", command=self.dice_roll)
-        self.roll_the_dice.pack()
+        self.roll_the_dice = tk.Button(self, text="Roll the dice", 
+                                command=self.dice_roll, font="Arial 12", 
+                                bg="#991006", fg="#fce7e6", padx=10, pady=10)
+        self.roll_the_dice.pack(side="bottom", pady=20)
         self.label = tk.Label(self, image="")
 
 
