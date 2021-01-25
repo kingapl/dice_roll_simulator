@@ -26,7 +26,9 @@ class DiceRollSimulator(tk.Frame):
                                 command=self.dice_roll, font="Arial 12", 
                                 bg="#991006", fg="#fce7e6", padx=10, pady=10)
         self.roll_the_dice.pack(side="bottom", pady=20)
-        self.label = tk.Label(self, image="")
+
+        self.dice_label = tk.Label(self, image="")
+        self.dice_label.pack(anchor="center", ipady=180)
 
 
     def dice_roll(self):
@@ -35,9 +37,7 @@ class DiceRollSimulator(tk.Frame):
         self.original = Image.open(die) # 640x628
         resized = self.original.resize((320, 314), Image.ANTIALIAS)
         self.image = ImageTk.PhotoImage(resized)
-        #self.label = tk.Label(self, image=self.image)
-        self.label.config(image=self.image)
-        self.label.pack()
+        self.dice_label.config(image=self.image)
 
 
 root = tk.Tk()
