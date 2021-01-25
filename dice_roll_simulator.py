@@ -18,7 +18,8 @@ class DiceRollSimulator(tk.Frame):
 
 
     def create_widgets(self):
-        self.text_label = tk.Label(self, text="Hello, roll the dice!")
+        self.text_label = tk.Label(self, text="Hello, roll the dice!", 
+                                font="Arial 24 bold", pady=20, fg="#991006")
         self.text_label.pack(side="top")
 
         self.roll_the_dice = tk.Button(self, text="Roll the dice", command=self.dice_roll)
